@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: keep-alive-ping-bot
+    runtime: docker
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: TARGET_URL
+        sync: false
+      - key: WEBAPP_URL
+        sync: false
+      - key: PORT
+        value: "10000"
+      - key: NODE_ENV
+        value: "production"
